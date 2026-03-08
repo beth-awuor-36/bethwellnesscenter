@@ -1,133 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beth Wellness Center - Holistic healing, yoga, and therapy in Kigali, Rwanda.">
-    <title>Beth Wellness Center</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <nav class="navbar">
-        <div class="container nav-container">
+    <title>Beth Wellness Center</title>
+
+    <meta
+      name="description"
+      content="Beth Wellness Center promotes mental health, wellbeing, and safe spaces for young people through community outreach, counseling programs, and physical wellness activities in Kigali, Rwanda."
+    />
+
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="Beth Wellness Center" />
+    <meta
+      property="og:description"
+      content="Promoting mental health, wellbeing, and safe spaces for young people."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beth-awuor-36/bethwellnesscenter/" />
+    <meta property="og:image" content="media/logo.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Beth Wellness Center" />
+    <meta
+      name="twitter:description"
+      content="Promoting mental health, wellbeing, and safe spaces for young people."
+    />
+    <meta name="twitter:image" content="media/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
             <a href="#" class="logo">
-                <img src="media/logo.png" alt="Beth Wellness Center Logo" class="logo-img">
+                <img src="media/logo.png" alt="Beth Wellness Center Logo" />
             </a>
-            
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#partnerships">Partnerships</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div id="menu-toogle">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-        </div>
-    </nav>
-
-    <header id="home" class="hero">
-        <div class="hero-overlay">
-            <img src="media/hero-image.jpeg" alt="Beth Wellness Center Community" class="hero-bg">
-        </div>
-        <div class="container hero-content">
-            <h1>Empowering Your Journey to Wellness</h1>
-            <p>A sanctuary for holistic healing, physical wellness, and mental well-being in the heart of Kimihurura.</p>
-            <a href="#contact" class="btn btn-primary">Book a Session</a>
-        </div>
+        </nav>
     </header>
 
-    <section id="about" class="section">
-        <div class="container split-layout">
-            <div class="about-image-container">
-                <img src="media/yoga.jpg" alt="Yoga session at Beth Wellness" class="about-img">
-            </div>
-            <div class="text-content">
-                <h2>About Beth Wellness Center</h2>
-                <p>We are dedicated to providing a nurturing space for growth and healing. Located in the serene environment of Kimihurura, Kigali, we combine traditional wisdom with modern practices to support your physical, spiritual, and mental health.</p>
-                <p>Our mission is to empower you to take control of your well-being through community, guidance, and expert care.</p>
-            </div>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <img
+        src="media/hero-image.jpeg"
+        class="hero-bg"
+        alt="Beth Wellness Center"
+      />
+
+      <div class="hero-content">
+        <h1>Beth Wellness Center</h1>
+        <p>
+          Promoting mental health, wellbeing, and safe spaces for young people.
+        </p>
+
+        <p>
+          We provide mental health awareness programs, community outreach
+          initiatives, and physical wellness activities that support the
+          wellbeing of young people and communities.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn">Join the Community</a>
+          <a href="#programs" class="btn">See Our Programs</a>
         </div>
+      </div>
     </section>
 
-    <section id="services" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="card">
-                    <div class="service-icon">🧘‍♂️</div>
-                    <h3>Yoga & Meditation</h3>
-                    <p>Restore balance to your body and mind with our guided daily classes suitable for all levels.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🧠</div>
-                    <h3>Counseling & Therapy</h3>
-                    <p>Professional psychological support to help you navigate life's challenges with resilience.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">💆‍♀️</div>
-                    <h3>Massage Therapy</h3>
-                    <p>Relax and rejuvenate with our holistic massage treatments designed to release tension.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🥗</div>
-                    <h3>Nutritional Guidance</h3>
-                    <p>Personalized diet plans to fuel your body and boost your immunity naturally.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🏃‍♂️</div>
-                    <h3>Fitness and Aerobics</h3>
-                    <p>High-energy group sessions and tailored workouts to improve cardiovascular health and physical strength.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Workshops and Retreats</h3>
-                    <p>Immersive educational experiences and peaceful getaways designed for deep healing and skill-building.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🤝</div>
-                    <h3>Community Gathering</h3>
-                    <p>Inclusive events and sharing circles that foster connection, belonging, and mutual support in Kigali.</p>
-                </div>
-                <div class="card">
-                    <div class="service-icon">🍹</div>
-                    <h3>Cafeteria and Refreshment</h3>
-                    <p>Fuel your body with our curated selection of healthy treats and drinks.</p>
-                </div>
-            </div>
+    <!-- About -->
+    <section id="about">
+      <div class="about-content">
+        <h2>About Us</h2>
+
+        <p>
+          Beth Wellness Center was created to promote mental health awareness
+          and provide safe spaces where young people and communities can learn,
+          grow, and heal. The center was founded by a professional with a background in
+          counselling psychology and community mental health work, with the goal
+          of addressing the growing need for mental health education and
+          support.
+        </p>
+        <figure>
+          <img src="media/beth-passport.jpg" alt="Founder of Beth Wellness Center." class="founder">
+          <figcaption>Meet the Founder, Beth Akoth</figcaption>
+        </figure>
+        <div class="mission-statement">
+            <h3>Mission</h3>
+            <p>
+            To promote mental health, wellbeing, and safe community spaces through
+            education, wellness programs, and partnerships.
+            </p>
+
+            <h3>Vision</h3>
+            <p>
+            A community where mental health is understood, supported, and
+            prioritized.
+            </p>    
         </div>
+      </div>
     </section>
 
+    <!-- Programs -->
+    <section id="programs" class="section">
+      <div class="programs-content">
+        <h2>Our Programs</h2>
+        <div class="program-card">
+            <h3>School & Institutional Programs</h3>
+            <ul>
+            <li>Mental health awareness workshops</li>
+            <li>Student wellbeing programs</li>
+            <li>Emotional intelligence and stress management sessions</li>
+            <li>Peer support training</li>
+            </ul>
+        </div>
+        <div class="program-card">
+            <h3>Community Outreach</h3>
+            <ul>
+            <li>Mental health awareness campaigns</li>
+            <li>Community wellness talks</li>
+            <li>Collaboration with hospitals and organizations</li>
+            </ul>
+        </div>
+        <div class="program-card">
+            <h3>Workplace / Organizational Wellness</h3>
+            <ul>
+            <li>Employee mental health workshops</li>
+            <li>Stress and burnout management</li>
+            </ul>
+        </div>
+        <div class="program-card">
+            <h3>Physical Wellness Programs</h3>
+            <ul>
+            <li>Yoga and mindfulness sessions</li>
+            <li>Pilates and body wellness programs</li>
+            <li>Group workouts and wellness activities</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section id="impact">
+      <div class="impact-content">
+        <h2>Our Impact</h2>
+
+        <p>
+          We organize mental health discussions, youth engagement programs, and
+          awareness activities to support communities and reduce stigma around
+          mental health.
+          Through outreach programs and wellness activities, we continue to
+          empower young people and communities to prioritize their wellbeing.
+        </p>
+        <img src="media/fitness.jpeg" alt="Beth Wellness Center on a fitness program.">
+      </div>
+      </section>
+
+    <!-- Partnerships -->
+    <section id="partnerships" class="section">
+      <div class="partnerships content">
+        <h2>Partnerships</h2>
+
+        <p>
+          We welcome collaboration with organizations that share our mission of
+          promoting mental health and community wellbeing.
+        </p>
+
+        <ul>
+          <li>Schools and universities</li>
+          <li>Hospitals and health centers</li>
+          <li>NGOs and community organizations</li>
+          <li>Corporate and workplace partners</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="section">
+      <div class="resources content">
+        <h2>Mental Health Resources</h2>
+
+        <p>
+          We share educational materials, wellness tips, and articles that help
+          individuals understand and care for their mental health.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery">
+  <h2>Gallery</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="media/fitness.jpeg" alt="Fitness Program Session">
+        <img src="media/hero-image.jpeg" alt="Community Gathering Session">
+        <img src="media/community-gathering.jpeg" alt="Community Gathering Session">
+        <img src="media/yoga.jpg" alt="Yoga Session">
+        <img src="media/IMG-20251130-WA0001.jpg" alt="Yoga Session">
+        <img src="media/IMG-20251130-WA0005.jpg" alt="Yoga Session">
+        <img src="media/IMG-20251215-WA0004.jpg" alt="Community Gathering Session">
+        <img src="media/IMG-20251215-WA0008.jpg" alt="Session Together">
+        <img src="media/IMG-20260120-WA0005.jpg" alt="Time with Students">
+        <img src="media/IMG-20260120-WA0004.jpg" alt="Time with Students">
+        <img src="media/IMG-20251221-WA0009.jpg" alt="Session Together">
+        <img src="media/IMG-20260120-WA0002.jpg" alt="Time with Students">
+      </div>
+      
+      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </div>
+</section>
+
+    <!-- Get Involved / Contact -->
     <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Visit Us</h2>
-            <div class="contact-card">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> Kimihurura, Kigali, Rwanda</p>
-                    <p><strong>Phone:</strong> <a href="tel:+250792957501">+250 792 957 501</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:bethfoundation1@gmail.com">bethfoundation1@gmail.com</a></p>
-                    <br>
-                    <h3>Opening Hours</h3>
-                    <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
-                    <p>Sat: 9:00 AM - 5:00 PM</p>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+        <h2>Get Involved</h2>
+
+        <p>
+          Join our wellness community, volunteer, or partner with us to expand
+          mental health support in Rwanda.
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:bethfoundation1@gmail.com"
+            >bethfoundation1@gmail.com</a
+          >
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+250792957501">+250 792 957 501</a>
+        </p>
+
+        <p><strong>Location:</strong> Kimihurura, Kigali, Rwanda</p>
+      </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Beth Wellness Center. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>© 2026 Beth Wellness Center</p>
+      </div>
     </footer>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

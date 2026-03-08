@@ -1,40 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
+const menuToggle = document.getElementById('menu-toogle');
+const navLinks = document.querySelector('.nav-links');
 
-    // --- Dark Mode Logic ---
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.textContent = '☀️';
-    }
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.textContent = isDark ? '☀️' : '🌙';
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
     });
+});
 
-    // --- Mobile Menu Logic ---
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+const track = document.querySelector('.carousel-track');
+const images = document.querySelectorAll('.carousel-track img');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
 
-    // Close menu when a link is clicked
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
+let index = 0;
 
-    // Close menu if clicking outside of it
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-            navLinks.classList.remove('active');
-        }
-    });
+function updateCarousel() {
+    // Moves the track by 100% of the container width per index
+    track.style.transform = `translateX(${-index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    index++;
+    if (index >= images.length) index = 0; // Loop back to start
+    updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+    index--;
+    if (index < 0) index = images.length - 1; // Loop to end
+    updateCarousel();
 });
