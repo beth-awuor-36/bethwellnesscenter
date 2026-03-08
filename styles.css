@@ -45,6 +45,7 @@ header .navbar {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+    border-radius: 0 0 40% 40%;
 }
 
 .logo img {
@@ -145,7 +146,6 @@ header .navbar {
     display: inline-block;
     transition: var(--transition);
     border: 1px solid transparent;
-    animation: organicFloat 8s infinite ease-in-out;
 }
 
 .btn:nth-child(1) { background: var(--primary); color: white; }
@@ -160,7 +160,6 @@ header .navbar {
 /* --- About & Image Cards --- */
 section { 
     padding: 80px 10%;
-    animation: organicFloat 8s infinite ease-in-out; 
 }
 
 .about-content {
@@ -302,7 +301,6 @@ footer {
     color: rgba(255,255,255,0.5);
     font-size: 0.8rem;
     border-top: 1px solid rgba(255,255,255,0.1);
-    margin-top: 2rem;
 }
 
 /* --- Mobile Responsiveness --- */
