@@ -1,38 +1,64 @@
-const menuToggle = document.getElementById('menu-toogle');
-const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('navLinks');
+const modal = document.getElementById('bookingModal');
 
+// Navigation Toggle
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
 });
 
-const navLinksItems = document.querySelectorAll('.nav-links a');
+// Modal Controls
+function openBooking() { modal.style.display = "block"; }
+function closeBooking() { modal.style.display = "none"; }
+window.onclick = (e) => { if (e.target == modal) closeBooking(); };
 
-navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
+// Conditional Service Logic
+function updateServiceOptions() {
+    const locationType = document.getElementById('locationType').value;
+    const servType = document.getElementById('servType');
+    servType.innerHTML = ""; // Reset
 
-const track = document.querySelector('.carousel-track');
-const images = document.querySelectorAll('.carousel-track img');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
+    const services = {
+        "Digital": [
+            "Online Group Circle",
+            "Digital Self-Care Webinar",
+            "Remote 1-on-1 Session"
+        ],
+        "Physical": [
+            "In-Person Counselling (Premium)",
+            "Physical Fitness & Yoga",
+            "Pilates Session",
+            "Workplace Wellness (On-site)"
+        ]
+    };
 
-let index = 0;
-
-function updateCarousel() {
-    // Moves the track by 100% of the container width per index
-    track.style.transform = `translateX(${-index * 100}%)`;
+    if (services[locationType]) {
+        services[locationType].forEach(s => {
+            let opt = document.createElement("option");
+            opt.value = s;
+            opt.innerHTML = s;
+            servType.appendChild(opt);
+        });
+    }
 }
 
-nextBtn.addEventListener('click', () => {
-    index++;
-    if (index >= images.length) index = 0; // Loop back to start
-    updateCarousel();
-});
+// Mood Check Interaction
+function checkMood(e) {
+    const t = document.getElementById('mood-response');
+    const n = {
+        happy: "Wonderful! Share your positive energy today.",
+        stressed: "Take a breath. Inhale for 4s, exhale for 4s.",
+        sad: "It's okay to feel this way. Be gentle with yourself.",
+        anxious: "Grounding Tip: Name 3 things you can see right now."
+    };
+    t.innerText = n[e];
+}
 
-prevBtn.addEventListener('click', () => {
-    index--;
-    if (index < 0) index = images.length - 1; // Loop to end
-    updateCarousel();
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
 });
