@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Plan | Beth Wellness Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="media/logo.png" alt="Logo" /></a>
+        <div id="menu-toggle" class="menu-icon"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html">Solution</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="pricing.html">Our Plan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><button onclick="openBooking()" class="btn-nav">Book Session</button></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="page-hero">
+        <h1>Our Plan</h1>
+        <p>Choose the wellness support that fits your needs with transparent pricing and flexible packages for individuals and institutions.</p>
+    </section>
+
+    <section class="page-section">
+        <h2>Individual Support</h2>
+        <div class="page-grid">
+            <div class="service-card">
+                <span class="plan-label">Guided Support Sessions</span>
+                <span class="price-tag">$15 - $23 per session</span>
+                <p>One-on-one and guided support sessions tailored to personal mental health needs.</p>
+            </div>
+            <div class="service-card premium">
+                <span class="plan-label">Monthly Wellness Subscription</span>
+                <span class="price-tag">From $12/month</span>
+                <p>Digital access to mood tracking, self-care tools, and community support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <h2>Mental Health Programs</h2>
+        <div class="page-grid">
+            <div class="service-card">
+                <h3>School & Organizational Programs</h3>
+                <span class="price-tag">From $115</span>
+                <ul class="feature-list">
+                    <li class="tick">Workshops, awareness sessions, and guided discussions</li>
+                </ul>
+            </div>
+            <div class="service-card premium">
+                <h3>Workshops & Events</h3>
+                <ul class="feature-list">
+                    <li class="tick">Single Workshop / Talk – $75 - $115</li>
+                    <li class="tick">Half-Day Engagement – $115 - $190</li>
+                    <li class="tick">Full-Day Program – Starting from $230</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <h2>Training & Capacity Building</h2>
+        <div class="page-grid">
+            <div class="service-card">
+                <h3>Staff Training</h3>
+                <span class="price-tag">From $155</span>
+                <p>Mental health awareness and support skills for teachers, staff, and leaders.</p>
+            </div>
+            <div class="service-card premium">
+                <h3>Peer Support Program Setup</h3>
+                <p>Custom pricing based on scope and scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <h2>Institutional Packages</h2>
+        <div class="page-grid">
+            <div class="service-card">
+                <span class="plan-label">Basic Package</span>
+                <span class="price-tag">$115/month</span>
+                <p>Core digital and program support for institutional wellness.</p>
+            </div>
+            <div class="service-card premium">
+                <span class="plan-label">Standard Package</span>
+                <span class="price-tag">$230/month</span>
+                <p>Expanded access to workshops, tools, and guided support.</p>
+            </div>
+            <div class="service-card">
+                <span class="plan-label">Premium Package</span>
+                <span class="price-tag">$385/month</span>
+                <p>Full institutional support with priority delivery and reporting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <p>All services are tailored to meet the unique needs of each client or institution. Final pricing may vary depending on scope, number of participants, and duration.</p>
+        <p>To get started or request a customized package, connect with us through our platform or contact us directly.</p>
+        <div class="button-row" style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <button class="btn btn-primary" onclick="openBooking()">Book a Session</button>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+    </section>
+</main>
+
+<div id="bookingChoiceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBooking()">&times;</span>
+        <h2>Book Support</h2>
+        <p>Choose whether you're booking as an individual or registering an institution.</p>
+        <div class="button-row" style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+            <button class="btn btn-primary" onclick="openIndividualBooking()">Book as Individual</button>
+            <button class="btn btn-secondary" onclick="openRegister()">Register an Institution</button>
+        </div>
+    </div>
+</div>
+
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBooking()">&times;</span>
+        <h2>Reserve Your Session</h2>
+        <form id="bookingForm" class="booking-form" action="https://formspree.io/f/xgoprbdl" method="post">
+            <label>Full Name</label>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <label>Session Setting</label>
+            <select name="Type" id="locationType" onchange="updateServiceOptions()" required>
+                <option value="" disabled selected>Select Setting</option>
+                <option value="Digital">Digital (Online)</option>
+                <option value="Physical">Physical (In-Person)</option>
+            </select>
+            <label>Select Service</label>
+            <select name="Service" id="servType" required>
+                <option value="" disabled selected>Select a setting first</option>
+            </select>
+            <div class="form-row">
+                <div class="form-group"><label>Day</label><input type="date" name="Date" required></div>
+                <div class="form-group"><label>Time</label><input type="time" name="Time" required></div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Book & Notify Beth</button>
+        </form>
+    </div>
+</div>
+
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeRegister()">&times;</span>
+        <h2>Register Your Institution</h2>
+        <form id="registerForm" class="booking-form" action="https://formspree.io/f/xgoprbdl" method="post">
+            <label>Institution Name</label>
+            <input type="text" name="Institution" placeholder="Institution Name" required>
+            <label>Contact Person</label>
+            <input type="text" name="Contact" placeholder="Your Name" required>
+            <label>Email</label>
+            <input type="email" name="Email" placeholder="Email Address" required>
+            <label>Phone</label>
+            <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <label>Institution Type</label>
+            <select name="InstitutionType" required>
+                <option value="" disabled selected>Select Type</option>
+                <option value="School">School</option>
+                <option value="Workplace">Workplace</option>
+                <option value="Community Organization">Community Organization</option>
+                <option value="Other">Other</option>
+            </select>
+            <label>Message</label>
+            <textarea name="Message" rows="4" placeholder="Tell us about your institution and needs"></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Submit Registration</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <h2>Beth Wellness Center</h2>
+        <p>Kigali, Rwanda | Email: bethfoundation1@gmail.com</p>
+        <p style="margin-top:20px; opacity:0.6; font-size:0.8rem;">© 2026 Beth Wellness Center</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>    <script src="//code.tidio.co/zudrlunr48quyktf2ktafk9gp33xfilr.js" async></script></body>
+</html>

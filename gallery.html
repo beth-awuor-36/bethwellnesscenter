@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Beth Wellness Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="media/logo.png" alt="Logo" /></a>
+        <div id="menu-toggle" class="menu-icon"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html">Solution</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="pricing.html">Our Plan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><button onclick="openBooking()" class="btn-nav">Book Session</button></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="page-hero">
+        <h1>Gallery</h1>
+        <p>Explore moments from our events, sessions, and community connections.</p>
+    </section>
+
+    <section class="page-section">
+        <div class="gallery-grid">
+            <img src="media/hero.jpg" alt="Wellness" />
+            <img src="media/community-gathering.jpeg" alt="Community Gathering" />
+            <img src="media/fitness.jpeg" alt="Fitness Session" />
+            <img src="media/the_founder.jpeg" alt="Founder Beth" />
+            <img src="media/yoga.jpg" alt="Yoga Session" />
+            <img src="media/IMG-20251215-WA0004.jpg" alt="Wellness Event" />
+        </div>
+    </section>
+</main>
+
+<div id="bookingChoiceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBooking()">&times;</span>
+        <h2>Book Support</h2>
+        <p>Choose whether you're booking as an individual or registering an institution.</p>
+        <div class="button-row" style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+            <button class="btn btn-primary" onclick="openIndividualBooking()">Book as Individual</button>
+            <button class="btn btn-secondary" onclick="openRegister()">Register an Institution</button>
+        </div>
+    </div>
+</div>
+
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBooking()">&times;</span>
+        <h2>Reserve Your Session</h2>
+        <form id="bookingForm" class="booking-form" action="https://formspree.io/f/xgoprbdl" method="post">
+            <label>Full Name</label>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <label>Session Setting</label>
+            <select name="Type" id="locationType" onchange="updateServiceOptions()" required>
+                <option value="" disabled selected>Select Setting</option>
+                <option value="Digital">Digital (Online)</option>
+                <option value="Physical">Physical (In-Person)</option>
+            </select>
+            <label>Select Service</label>
+            <select name="Service" id="servType" required>
+                <option value="" disabled selected>Select a setting first</option>
+            </select>
+            <div class="form-row">
+                <div class="form-group"><label>Day</label><input type="date" name="Date" required></div>
+                <div class="form-group"><label>Time</label><input type="time" name="Time" required></div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Book & Notify Beth</button>
+        </form>
+    </div>
+</div>
+
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeRegister()">&times;</span>
+        <h2>Register Your Institution</h2>
+        <form id="registerForm" class="booking-form" action="https://formspree.io/f/xgoprbdl" method="post">
+            <label>Institution Name</label>
+            <input type="text" name="Institution" placeholder="Institution Name" required>
+            <label>Contact Person</label>
+            <input type="text" name="Contact" placeholder="Your Name" required>
+            <label>Email</label>
+            <input type="email" name="Email" placeholder="Email Address" required>
+            <label>Phone</label>
+            <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <label>Institution Type</label>
+            <select name="InstitutionType" required>
+                <option value="" disabled selected>Select Type</option>
+                <option value="School">School</option>
+                <option value="Workplace">Workplace</option>
+                <option value="Community Organization">Community Organization</option>
+                <option value="Other">Other</option>
+            </select>
+            <label>Message</label>
+            <textarea name="Message" rows="4" placeholder="Tell us about your institution and needs"></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Submit Registration</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <h2>Beth Wellness Center</h2>
+        <p>Kigali, Rwanda | Email: bethfoundation1@gmail.com</p>
+        <p style="margin-top:20px; opacity:0.6; font-size:0.8rem;">© 2026 Beth Wellness Center</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>    <script src="//code.tidio.co/zudrlunr48quyktf2ktafk9gp33xfilr.js" async></script></body>
+</html>

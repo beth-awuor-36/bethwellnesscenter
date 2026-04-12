@@ -16,118 +16,135 @@
         <a href="#" class="logo"><img src="media/logo.png" alt="Logo" /></a>
         <div id="menu-toggle" class="menu-icon"><span></span><span></span><span></span></div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Solutions</a></li>
-            <li><a href="#impact">Impact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html">Solution</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="pricing.html">Our Plan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><button onclick="openBooking()" class="btn-nav">Book Session</button></li>
         </ul>
     </nav>
 </header>
 
 <section id="home" class="hero">
-    <img src="media/hero.jpg" class="hero-bg" alt="Wellness" />
+    <img src="media/community-gathering.jpeg" class="hero-bg" alt="Safe mental health community" />
     <div class="hero-content">
-        <h1>Beth Wellness Center</h1>
-        <p class="tagline">Safe spaces for healing & growth.</p>
-        <p>A professional wellness platform providing mental health awareness and safe community spaces in Rwanda.</p>
+        <h1>Safe Spaces for Healing & Growth</h1>
+        <p>A digital wellness platform providing mental health awareness, accessible support, and safe, inclusive communities across Rwanda powered by technology and strong partnerships.</p>
         <div class="hero-buttons">
-            <button onclick="openBooking()" class="btn btn-primary">Book a Session</button>
-            <a href="#services" class="btn btn-secondary">Our Plans</a>
+            <button onclick="openBooking()" class="btn btn-primary">Get Support</button>
+            <a href="contact.html" class="btn btn-secondary">Join the Community</a>
+            <a href="contact.html" class="btn btn-secondary">Partner With Us</a>
         </div>
     </div>
 </section>
 
-<section id="about">
-    <div class="side-by-side-container">
-        <div class="text-content">
-            <span class="plan-label">Meet the Founder</span>
-            <h2>Professional Care & Empathy</h2>
-            <p>
-                Beth Awuor is a counselling psychology professional and wellness community facilitator passionate about creating safe spaces for mental and emotional well-being. She is dedicated to helping individuals navigate life’s challenges, build resilience, and feel seen and heard.
-                Recognizing that many people suffer in silence—often unaware that they need support—Beth is committed to breaking the stigma around mental health and making conversations more open and accessible. Through community sessions, one-on-one support, and group engagements, she promotes healing, growth, and self-awareness.
-                She is also exploring the integration of technology into mental health, with a vision to create digital tools that support emotional well-being and connect people to care.
-            </p>
-            
-            <div class="approach-grid">
-                <div class="mv-box">
-                    <h4>Our Mission</h4>
-                    <p>
-                        Our mission is to provide safe, inclusive, and tech-integrated wellness spaces that empower individuals through personalized digital resources, immersive physical sessions, and empathetic community support.
-                    </p>
-                </div>
-                <div class="mv-box">
-                    <h4>Our Vision</h4>
-                    <p>
-                        To create a world where mental support is as accessible as a digital message, and where every individual in our community has the tools to achieve lasting emotional resilience.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="image-content">
-            <img src="media/the_founder.jpeg" alt="Founder" class="standard-img">
-        </div>
-    </div>
+<section class="page-section">
+    <h2>You Are Not Alone</h2>
+    <p>We believe everyone deserves a safe space to be heard, supported, and understood. Our platform combines human connection with digital tools to make mental wellness accessible, private, and stigma-free.</p>
 </section>
 
-<section id="mood-check" class="mood-section">
-    <div class="mood-card">
-        <h3>Digital Solution: Mood Check</h3>
-        <div class="mood-options">
-            <button onclick="checkMood('happy')">😊 Happy</button>
-            <button onclick="checkMood('stressed')">😫 Stressed</button>
-            <button onclick="checkMood('sad')">😔 Sad</button>
-            <button onclick="checkMood('anxious')">😰 Anxious</button>
-        </div>
-        <div id="mood-response" class="mood-response"></div>
-    </div>
-</section>
-
-<section id="services">
-    <h2 style="text-align:center; margin-bottom: 3rem;">Compare Our Wellness Plans</h2>
-    <div class="services-grid">
-        <div class="service-card digital">
-            <span class="plan-label">Digital Solution</span>
-            <span class="price-tag">10k - 20k RWF</span>
-            <h3>Digital Wellness</h3>
-            <ul class="feature-list">
-                <li class="tick">Self-care Webinars</li>
-                <li class="tick">Online Group Circles</li>
-                <li class="tick">Digital Resources & PDFs</li>
-                <li class="wrong">In-person Private Sessions</li>
-                <li class="wrong">Physical Fitness/Yoga</li>
-            </ul>
-            <button onclick="openBooking()" class="service-link">Access Digital →</button>
+<section class="page-section">
+    <h2>Who We Serve</h2>
+    <div class="page-grid">
+        <div class="service-card">
+            <h3>For Individuals</h3>
+            <p>Access safe spaces, connect with others, and use tools that support your mental wellbeing anytime, anywhere.</p>
         </div>
         <div class="service-card premium">
-            <div class="popular-badge">Recommended</div>
-            <span class="plan-label">Premium Solution</span>
-            <span class="price-tag">25k+ RWF</span>
-            <h3>Physical & In-Person</h3>
-            <ul class="feature-list">
-                <li class="tick">1-on-1 Physical Counselling</li>
-                <li class="tick">Yoga & Pilates Classes</li>
-                <li class="tick">Private Safe-Space Access</li>
-                <li class="tick">Direct WhatsApp Priority</li>
-                <li class="tick">Everything in Digital</li>
-            </ul>
-            <button onclick="openBooking()" class="service-link">Go Premium →</button>
+            <h3>For Schools, Institutions, Hospitals & Organizations</h3>
+            <p>Partner with us to bring structured mental health programs, digital tools, and safe spaces to your students and communities.</p>
         </div>
     </div>
 </section>
 
-<section id="impact" style="background: #fff;">
-    <div class="side-by-side-container reverse">
-        <div class="text-content">
-            <h2>Our Impact</h2>
-            <p>Through fitness activities and awareness campaigns, we empower the community to prioritize their daily wellbeing.</p>
-            <a href="https://wa.me/250792957501" class="btn btn-primary" style="margin-top:20px;">Support Our Mission</a>
+<section class="page-section">
+    <h2>What We Offer</h2>
+    <div class="page-grid">
+        <div class="service-card">
+            <h3>Mental Health Awareness</h3>
+            <p>Access culturally relevant resources, education, and workshops designed to reduce stigma and increase understanding.</p>
         </div>
-        <div class="image-content">
-            <img src="media/fitness.jpeg" alt="Wellness Session" class="standard-img">
+        <div class="service-card premium">
+            <h3>Safe Digital Spaces</h3>
+            <p>Join moderated, anonymous, and judgment-free communities where you can share and connect safely.</p>
+        </div>
+        <div class="service-card">
+            <h3>Tech-Enabled Support</h3>
+            <p>Use digital tools like mood tracking, journaling, and guided support to better understand your mental health.</p>
+        </div>
+        <div class="service-card premium">
+            <h3>Community Connection</h3>
+            <p>Engage in discussions, events, and shared experiences that promote healing and growth.</p>
         </div>
     </div>
 </section>
+
+<section class="page-section">
+    <h2>Start Your Journey Today</h2>
+    <div class="button-row" style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button onclick="openBooking()" class="btn btn-primary">Get Support</button>
+        <a href="contact.html" class="btn btn-secondary">Join the Community</a>
+        <a href="contact.html" class="btn btn-secondary">Partner With Us</a>
+    </div>
+</section>
+
+<section class="homepage-preview">
+    <div class="side-by-side-container reverse">
+        <div class="image-content">
+            <img src="media/the_founder.jpeg" alt="Founder Beth Awuor" class="standard-img">
+        </div>
+        <div class="text-content">
+            <span class="plan-label">About Beth Wellness Center</span>
+            <h2>Care, community, and tech-powered support</h2>
+            <p>Beth Wellness Center blends compassionate counselling with digital wellness tools to support people across Rwanda.</p>
+            <p>Explore the founder’s story, our values, and discover the inclusive programs that make mental health support easier to access.</p>
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="homepage-preview">
+    <div class="side-by-side-container">
+        <div class="text-content">
+            <span class="plan-label">Solutions for Individuals and Institutions</span>
+            <h2>Wellness solutions beyond individual care</h2>
+            <p>Beth Wellness Center supports individuals and institutions with accessible, anonymous, and moderated care.</p>
+            <p>From digital self-care tools to in-person counselling and community engagement, our solutions are designed to meet people where they are.</p>
+            <a href="solutions.html" class="btn btn-primary">See Our Solutions</a>
+        </div>
+        <div class="image-content">
+            <img src="media/community-gathering.jpeg" alt="Community wellness" class="standard-img">
+        </div>
+    </div>
+</section>
+
+<section class="homepage-preview homepage-preview--full">
+    <div class="side-by-side-container">
+        <div class="text-content">
+            <span class="plan-label">Partnerships</span>
+            <h2>Partnering with schools, NGOs, and communities</h2>
+            <p>We work with schools, youth organizations, community groups, NGOs, and universities to bring safe mental health support where it is needed most.</p>
+            <p>Our partnership work includes programs in schools, digital platform access, trainings and workshops, and practical support for building safe spaces.</p>
+            <a href="partnerships.html" class="btn btn-primary">Partner with Us</a>
+        </div>
+    </div>
+</section>
+
+<div id="bookingChoiceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBooking()">&times;</span>
+        <h2>Book Support</h2>
+        <p>Choose whether you're booking as an individual or registering an institution.</p>
+        <div class="button-row" style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+            <button class="btn btn-primary" onclick="openIndividualBooking()">Book as Individual</button>
+            <button class="btn btn-secondary" onclick="openRegister()">Register an Institution</button>
+        </div>
+    </div>
+</div>
 
 <div id="bookingModal" class="modal">
     <div class="modal-content">
@@ -154,6 +171,34 @@
                 <div class="form-group"><label>Time</label><input type="time" name="Time" required></div>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Book & Notify Beth</button>
+        </form>
+    </div>
+</div>
+
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeRegister()">&times;</span>
+        <h2>Register Your Institution</h2>
+        <form id="registerForm" class="booking-form" action="https://formspree.io/f/xgoprbdl" method="post">
+            <label>Institution Name</label>
+            <input type="text" name="Institution" placeholder="Institution Name" required>
+            <label>Contact Person</label>
+            <input type="text" name="Contact" placeholder="Your Name" required>
+            <label>Email</label>
+            <input type="email" name="Email" placeholder="Email Address" required>
+            <label>Phone</label>
+            <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <label>Institution Type</label>
+            <select name="InstitutionType" required>
+                <option value="" disabled selected>Select Type</option>
+                <option value="School">School</option>
+                <option value="Workplace">Workplace</option>
+                <option value="Community Organization">Community Organization</option>
+                <option value="Other">Other</option>
+            </select>
+            <label>Message</label>
+            <textarea name="Message" rows="4" placeholder="Tell us about your institution and needs"></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Submit Registration</button>
         </form>
     </div>
 </div>

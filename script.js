@@ -1,6 +1,8 @@
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('navLinks');
-const modal = document.getElementById('bookingModal');
+const bookingChoiceModal = document.getElementById('bookingChoiceModal');
+const bookingModal = document.getElementById('bookingModal');
+const registerModal = document.getElementById('registerModal');
 
 // Navigation Toggle
 menuToggle.addEventListener('click', () => {
@@ -9,9 +11,42 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Modal Controls
-function openBooking() { modal.style.display = "block"; }
-function closeBooking() { modal.style.display = "none"; }
-window.onclick = (e) => { if (e.target == modal) closeBooking(); };
+function openBooking() {
+    if (bookingModal) bookingModal.style.display = 'none';
+    if (registerModal) registerModal.style.display = 'none';
+    if (bookingChoiceModal) {
+        bookingChoiceModal.style.display = 'block';
+    } else if (bookingModal) {
+        bookingModal.style.display = 'block';
+    }
+}
+
+function closeBooking() {
+    if (bookingChoiceModal) bookingChoiceModal.style.display = 'none';
+    if (bookingModal) bookingModal.style.display = 'none';
+}
+
+function openIndividualBooking() {
+    if (bookingChoiceModal) bookingChoiceModal.style.display = 'none';
+    if (registerModal) registerModal.style.display = 'none';
+    if (bookingModal) bookingModal.style.display = 'block';
+}
+
+function openRegister() {
+    if (bookingChoiceModal) bookingChoiceModal.style.display = 'none';
+    if (bookingModal) bookingModal.style.display = 'none';
+    if (registerModal) registerModal.style.display = 'block';
+}
+
+function closeRegister() {
+    if (registerModal) registerModal.style.display = 'none';
+}
+
+window.onclick = (e) => {
+    if (bookingChoiceModal && e.target == bookingChoiceModal) closeBooking();
+    if (bookingModal && e.target == bookingModal) closeBooking();
+    if (registerModal && e.target == registerModal) closeRegister();
+};
 
 // Conditional Service Logic
 function updateServiceOptions() {
