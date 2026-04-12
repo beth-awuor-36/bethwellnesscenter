@@ -251,6 +251,15 @@ header .navbar {
     min-width: 320px;
 }
 
+.founder-quote {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #4f5b6b;
+    line-height: 1.75;
+    border-left: 4px solid rgba(39, 110, 194, 0.4);
+    padding-left: 1rem;
+}
+
 .mood-section {
     background: #e9f1f3;
     display: flex;
